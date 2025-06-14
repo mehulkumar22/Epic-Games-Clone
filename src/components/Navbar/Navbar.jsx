@@ -101,8 +101,8 @@ const EpicNavbar = () => {
                 )}
               </div>
 
-              <div className="user-initial">A</div>
-              <span className="username">Admin</span>
+              <div className="user-initial">M</div>
+              <span className="username">Mehul</span>
             </div>
           )}
         </div>
@@ -133,8 +133,8 @@ const EpicNavbar = () => {
         {/* Desktop User Info */}
         {!isMobile && (
           <>
-            <div className="user-initial">A</div>
-            <span className="username">Admin</span>
+            <div className="user-initial">M</div>
+            <span className="username">Mehul</span>
           </>
         )}
 
