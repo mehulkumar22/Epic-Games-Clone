@@ -1,0 +1,344 @@
+.hero-slider-container {
+  display: flex;
+  gap: 20px;
+  width: 75%;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.hero-main-slider {
+  width: 100%;
+  max-width: 1920px;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+}
+
+.hero-main-slider .carousel-item {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-main-slider .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: stretch;
+  border-radius: 12px;
+}
+
+.hero-game-thumbnails {
+  width: 20%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.hero-game-thumbnails ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.hero-game-thumbnails li {
+  padding-left: 30px;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-game-thumbnails li:hover {
+  background-color: #333;
+}
+
+.hero-game-thumbnails .active-thumbnail {
+  background-color: #404040;
+}
+
+.game-thumbnail {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-right: 70px;
+}
+
+.thumbnail-placeholder {
+  height: 80px;
+  width: 60px;
+  border-radius: 8px;
+  background-color: #3a3a3a;
+}
+
+.game-name {
+  color: white;
+  opacity: 0.8;
+  font-size: 14px;
+}
+
+.game-thumbnail:hover .thumbnail-placeholder {
+  filter: brightness(1.2);
+}
+
+.game-thumbnail:hover .game-name {
+  opacity: 1;
+}
+
+.carousel-caption {
+  background: transparent;
+  padding: 40px;
+  bottom: 10px;
+  left: 10px;
+  right: auto;
+  text-align: left;
+  position: absolute;
+  max-width: 50%;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.carousel-caption h5 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.carousel-caption .subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.carousel-caption p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.discount-badge {
+  display: inline-block;
+  background-color: rgb(38,187,255);
+  color: #fff;
+  padding: 1.5px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.price-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.discounted-price {
+  color: white;
+  font-size: 1rem;
+}
+
+.buy-now-btn {
+  background-color: white;
+  border: none;
+  padding: 10px 60px;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.game-title-img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+  animation: slideInLeft 1s ease;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.marg {
+  margin-bottom: 50px;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .marg {
+    margin-bottom: 20px;
+  }
+
+  .hero-slider-container {
+    flex-direction: column;
+    gap: 25px;
+    width: 92%;
+  }
+
+  .hero-main-slider {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .hero-game-thumbnails {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .hero-game-thumbnails ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero-game-thumbnails li {
+    width: calc(33.33% - 20px);
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .thumbnail-placeholder {
+    width: 60px;
+    height: 80px;
+  }
+
+  .game-name {
+    font-size: 13px;
+  }
+
+  .carousel-caption {
+    max-width: 85%;
+    left: 5%;
+    padding: 20px;
+    bottom: 20px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.6rem;
+  }
+
+  .carousel-caption .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.95rem;
+  }
+
+  .price-container {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .buy-now-btn {
+    padding: 8px 30px;
+    font-size: 0.95rem;
+  }
+
+  .game-title-img {
+    max-width: 160px;
+  }
+}
+
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+  .hero-slider-container {
+    flex-direction: column;
+    width: 100%;
+    padding: 0 10px;
+    gap: 20px;
+  }
+
+  .hero-main-slider {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .hero-game-thumbnails {
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero-game-thumbnails ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .hero-game-thumbnails li {
+    flex: 1 1 calc(50% - 10px);
+    padding: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .game-thumbnail {
+    gap: 10px;
+    padding-right: 0;
+  }
+
+  .thumbnail-placeholder {
+    width: 45px;
+    height: 60px;
+  }
+
+  .game-name {
+    font-size: 12px;
+    opacity: 1;
+  }
+
+  .carousel-caption {
+    left: 5%;
+    bottom: 10px;
+    padding: 10px;
+    max-width: 90%;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1.2rem;
+  }
+
+  .carousel-caption .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+
+  .price-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .buy-now-btn {
+    padding: 6px 20px;
+    font-size: 0.8rem;
+  }
+
+  .game-title-img {
+    max-width: 120px;
+  }
+}

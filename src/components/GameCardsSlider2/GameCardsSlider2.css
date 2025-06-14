@@ -1,0 +1,194 @@
+.game-slider-container {
+  width: 75%;
+  margin: 0 auto;
+  color: white;
+  font-family: "Inter", sans-serif;
+  background-color: #121212;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.slider-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-buttons button {
+  background-color: #333337;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.nav-buttons button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.nav-buttons button:hover:not(:disabled) {
+  background-color: #44444b;
+}
+
+.slider-window {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.cards-wrapper {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
+}
+
+.card-wrapper {
+  flex-shrink: 0;
+  width: 180px; /* fixed card width */
+}
+
+.game-card {
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgb(0 0 0 / 0.8);
+}
+
+.image-container {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.game-card:hover .game-image {
+  transform: scale(1.1);
+}
+
+.discount-badge {
+  background-color: #0070f3;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.category {
+  color: #a0a0a0;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0.75rem 1rem 0.25rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 1rem 0.5rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pricing {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* smaller gap to keep close */
+  margin: 0 1rem;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 0.875rem;
+}
+
+.sale-price {
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+}
+
+/* Removed pagination dots CSS */
+
+@media (max-width: 1024px) {
+  .game-slider-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-slider-container {
+    width: 100%;
+  }
+
+  .slider-title {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  .cards-wrapper {
+    gap: 10px;
+  }
+}
+
+/* Removed all card-wrapper width media queries */
+@media (max-width: 480px) {
+  .category {
+    font-size: 0.6rem;
+  }
+
+  .title {
+    font-size: .8rem;
+  }
+
+  .original-price {
+    font-size: 0.7rem;
+  }
+
+  .sale-price {
+    font-size: 0.85rem;
+  }
+
+  .discount-badge {
+    font-size: 0.65rem;
+    padding: 1px 4px;
+  }
+}

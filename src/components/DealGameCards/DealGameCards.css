@@ -1,0 +1,162 @@
+.deal-section {
+  width: 100%;
+  padding: 3rem 0;
+}
+
+.deal-container {
+  width: 75%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.deal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.deal-slider {
+  display: none;
+}
+
+.deal-slider-card {
+  min-width: 80%;
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+}
+
+.deal-card {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: none;
+}
+
+.deal-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.deal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+}
+
+.deal-title {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.75rem;
+  line-height: 1.3;
+}
+
+.deal-description {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.deal-discount-badge {
+  display: inline-block;
+  background-color: #0074E4;
+  color: #fff;
+  padding: 1.5px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.deal-price {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.deal-original-price {
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.deal-discounted-price {
+  color: white;
+  font-size: 1rem;
+}
+
+.deal-image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.deal-badge {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(70, 66, 250);
+  color: #fff;
+  text-align: center;
+  padding: 0.6rem 0;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .deal-container {
+    width: 90%;
+  }
+
+  .deal-grid {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .deal-grid {
+    display: none;
+  }
+
+  .deal-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    scrollbar-width: none;
+  }
+  .deal-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  .deal-image {
+    height: 200px;
+  }
+
+  .deal-badge{
+    padding: 0.3rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .deal-image {
+    height: 180px;
+  }
+
+  .deal-section {
+    padding: 2rem 0;
+  }
+}
