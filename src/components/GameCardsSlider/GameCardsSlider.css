@@ -191,4 +191,9 @@
     font-size: 0.65rem;
     padding: 1px 4px;
   }
+
+  .game-card:hover {
+  transform: none;
+  box-shadow: none;
+  }
 }
